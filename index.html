@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Audio examples for multi-channel TSE with DVAD</title>
+		<meta charset="utf-8">
+
+        <!-- <style> 
+            body{text-align:center} 
+        </style>  -->
+        
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    
+    <body>
+        <div class="header">
+            <h1 class="mt-5">Audio examples for multi-channel target speaker extraction with directional voice activity detection</h1>
+        </div>
+
+        <br>
+        
+        <div class="narrow-container">
+            <div class="comparisons-desktop" align="center">
+                <h2>Performance on simulated data</h2>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Mixture</th>
+                            <th>Clean</th>
+                            <th>Proposed</th>
+                        </tr>
+    
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00373_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00373_dry.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00373_enh.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00438_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00438_dry.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00438_enh.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+                       
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00752_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00752_dry.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_00752_enh.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_01111_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_01111_dry.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/simulated/scene_01111_enh.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <h2>Performance on real-world data</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Mixture</th>
+                            <th>FT-JNF [1]</th>
+                            <th>Proposed</th>
+                        </tr>
+    
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0001_seg3_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0001_seg3_ftjnf.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0001_seg3_dpcrn.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0007_seg4_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0007_seg4_ftjnf.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0007_seg4_dpcrn.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0013_seg4_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0013_seg4_ftjnf.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0013_seg4_dpcrn.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0020_seg3_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0020_seg3_ftjnf.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0020_seg3_dpcrn.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0024_seg1_mix.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0024_seg1_ftjnf.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                            <td class='auto-style'>
+                                <div class="audio">
+                                    <audio controls preload="auto">
+                                        <source src="samples/real/E0024_seg1_dpcrn.wav", type="audio/wav">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+  
+        <p>
+            [1] K. Tesch and T. Gerkmann, “Insights Into Deep Non-Linear Filters for Improved Multi-Channel Speech Enhancement,” IEEE/ACM Trans. Audio Speech Lang. Process., vol. 31, pp. 563–575, 2022.
+        </p>
+        </div>
+    </body>
+</html>		
